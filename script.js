@@ -49,6 +49,12 @@ searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value)
 })
 
+searchBox.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+      checkWeather(searchBox.value);
+    }
+});
+
 checkWeather();
 
 //Display Location
@@ -81,3 +87,4 @@ document.addEventListener("DOMContentLoaded", function() {
     displayLocation();
 });
   
+
